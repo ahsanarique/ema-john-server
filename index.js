@@ -68,6 +68,4 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`ema-john-server listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || port);
