@@ -1,8 +1,8 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
+require("dotenv").config();
 
 const port = 5000;
 
@@ -65,7 +65,7 @@ client.connect((err) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("ema-john-server");
 });
 
 app.listen(process.env.PORT || port);
